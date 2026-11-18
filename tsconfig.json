@@ -1,0 +1,15 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+   "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*":     ["pages/*"],
+      "@api/*":       ["api/*"],
+      "@fixtures":    ["fixtures/index.ts"],
+      "@factories/*": ["factories/*"],
+      "@support/*":   ["support/*"],
+      "@test-data/*": ["test-data/*"]
+    }
+  }
+}

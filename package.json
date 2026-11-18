@@ -1,0 +1,22 @@
+{
+  "name": "playwright-parabank-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:api": "playwright test tests/**/*-api.spec.ts",
+    "test:integration": "playwright test tests/**/*-integration.spec.ts",
+    "test:e2e": "playwright test tests/**/*-e2e.spec.ts",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.10"
+  }
+}
