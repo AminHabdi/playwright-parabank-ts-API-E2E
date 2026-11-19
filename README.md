@@ -9,12 +9,13 @@ Das Projekt demonstriert fortgeschrittene Testpraktiken wie parallele Testausfü
 - Authentifizierung & Benutzerverwaltung: Tests für Registrierung, Login, Logout und Fehlerszenarien.
 - Bank-Kernfunktionen (Core Banking): Kontoübersicht, neuer Kontoantrag, Überweisungen und Rechnungsbezahlung (Bill Pay).
 - Transaktionshistorie: Überprüfung von Kontobewegungen und Aktivitätsfiltern.
+- API- & E2E-Integration: Kombinierte Teststrategie, die API-Aufrufe und UI-Interaktionen nahtlos verbindet.
 - Page Object Model (POM): Klare Trennung von Testlogik und UI-Selektoren.
 - Erweiterte CI/CD-Pipeline: Parallele Testausführung (Sharding) über GitHub Actions mit automatischem Docker-App-Start.
 
 ## 🛠️ Technologien
 
-- Playwright – Modernes E2E-Test-Framework
+- Playwright – Modernes E2E- und API-Test-Framework
 - TypeScript – Typsichere Testentwicklung
 - Docker – Bereitstellung der ParaBank-Testumgebung (parasoft/parabank)
 - GitHub Actions – CI/CD-Pipeline mit Sharding und Artefakt-Upload
