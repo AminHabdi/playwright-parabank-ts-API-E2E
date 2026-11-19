@@ -57,7 +57,7 @@ export class RegisterPage {
             await this.zipCodeInput.fill(userData.zipCode);
             await this.phoneInput.fill(userData.phone);
             await this.ssnInput.fill(userData.ssn);
-            //await this.usernameInput.fill(userData.);
+            await this.usernameInput.fill(userData.username);
             await this.passwordInput.fill(userData.password);
             await this.confirmInput.fill(userData.password);
         }

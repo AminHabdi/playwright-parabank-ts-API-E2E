@@ -4,7 +4,6 @@ import registerDataJson from '@test-data/testData.json';
 // import { TestDataStructure } from '../support/types/register.types'; // <- Kann weg, wird nicht benutzt
 
 test.beforeEach(async ({ page, request }) => {
-    // FIX 1: Datenbank vor jedem Test leeren!
     await request.post('/parabank/services/bank/cleanDB');
 
     await page.goto('/parabank');
@@ -19,7 +18,7 @@ test('Registration of a user', async ({ page }) => {
 
     const uniqueUseData = {
         ...registerDataJson.signingupValidData,
-        username: `user_${Date.now()}` // FIX 2: Date.now() ist sicherer als Math.random()
+        username: `user${Date.now()}`
     };
 
     await registerPage.fillRegistrationForm(uniqueUseData);

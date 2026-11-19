@@ -7,6 +7,7 @@ export interface UserData {
   zipCode: string;
   phone: string;
   ssn: string;
+  username: string;
   password: string;
 }
 
