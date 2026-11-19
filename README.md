@@ -1,8 +1,8 @@
 # Playwright ParaBank Automation
 
-Ein robustes End-to-End-Testautomatisierungsprojekt für die ParaBank-Demowebsite (Parasoft), entwickelt mit Playwright und TypeScript unter Verwendung des Page Object Models (POM).
+Ein robustes End-to-End- und API-Testautomatisierungsprojekt für die ParaBank-Demowebsite (Parasoft), entwickelt mit Playwright und TypeScript unter Verwendung des Page Object Models (POM) – inklusive API-Tests sowie kombinierter API-/UI-Integrationstests.
 
-Das Projekt demonstriert fortgeschrittene Testpraktiken wie parallele Testausführung mittels Sharding und eine vollautomatische CI/CD-Pipeline inklusive lokalem Docker-Container-Setup.
+Das Projekt umfasst parallele Testausführung mittels Sharding sowie eine vollautomatische CI/CD-Pipeline mit lokalem Docker-Container-Setup.
 
 ## 🚀 Funktionen
 
