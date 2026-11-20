@@ -59,8 +59,9 @@ export class RegisterPage {
             await this.ssnInput.fill(userData.ssn);
             await this.usernameInput.fill(userData.username);
             await this.passwordInput.fill(userData.password);
-            await this.confirmInput.fill(userData.password);
+            await this.confirmInput.fill(userData.repeatedPassword ?? userData.password);
         }
+        
     
     async submitRegistration() {
             await this.registerButton.click();

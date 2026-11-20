@@ -10,6 +10,7 @@
       "phone": "0123456789",
       "ssn": "987-65-4321",
       "username": "mustermann",
-      "password": "Password123"
+      "password": "Password123",
+      "repeatedPassword": "Password123"
     }
   }

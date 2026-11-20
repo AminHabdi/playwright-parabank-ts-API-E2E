@@ -1,5 +1,4 @@
 import { Page, Locator } from '@playwright/test';
-import registerData from '../resources/testData.json'
 
 export class LoginPage {
     readonly page: Page;

@@ -9,22 +9,25 @@ export interface UserData {
   ssn: string;
   username: string;
   password: string;
+  repeatedPassword: string;
+
+
 }
 
 export interface TestDataStructure {
-    signingupValidData: UserData
+  signingupValidData: UserData
 }
 
 export type RegistrationPayload = {
-  'customer.firstName':       string;
-  'customer.lastName':        string;
-  'customer.address.street':  string;
-  'customer.address.city':    string;
-  'customer.address.state':   string;
+  'customer.firstName': string;
+  'customer.lastName': string;
+  'customer.address.street': string;
+  'customer.address.city': string;
+  'customer.address.state': string;
   'customer.address.zipCode': string;
-  'customer.phoneNumber':     string;
-  'customer.ssn':             string;
-  'customer.username':        string;
-  'customer.password':        string;
-  'repeatedPassword':         string;
+  'customer.phoneNumber': string;
+  'customer.ssn': string;
+  'customer.username': string;
+  'customer.password': string;
+  'customer.repeatedPassword': string;
 }

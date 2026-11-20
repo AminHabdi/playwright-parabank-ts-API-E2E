@@ -4,7 +4,9 @@ import { ENDPOINTS } from '@support/constants/endpoints';
 import type { RegistrationPayload } from '@support/types/index';
 
 export class ParaBankApi {
-    constructor(private readonly request: APIRequestContext) { }
+    constructor(private readonly request: APIRequestContext) {
+
+    }
 
     async registerUser(payload: RegistrationPayload): Promise<APIResponse> {
         await this.request.get(ENDPOINTS.REGISTER);
@@ -21,7 +23,10 @@ export class ParaBankApi {
         await this.request.get(ENDPOINTS.LOGIN);
 
         return this.request.post(ENDPOINTS.LOGIN, {
-            form: { username, password }
+            form: { username, password },
+            headers: {
+                'Accept': 'text/html,application/xhtml+xml'
+            }
         })
     }
 
