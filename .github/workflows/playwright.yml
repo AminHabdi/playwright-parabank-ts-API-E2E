@@ -42,7 +42,7 @@ jobs:
          sleep 15
 
     - name: Run Playwright tests with Sharding
-      run: npx playwright test --project=chromium --shard=${{ matrix.shard }}/2
+      run: npx playwright test --project=chromium --shard=${{ matrix.shard }}/3
 
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
