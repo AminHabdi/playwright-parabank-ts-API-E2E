@@ -24,13 +24,9 @@ export class ParaBankApi {
 
         return this.request.post(ENDPOINTS.LOGIN, {
             form: { username, password },
-            headers: {
-                'Accept': 'text/html,application/xhtml+xml'
-            }
+       //     headers: {
+         //       'Accept': 'text/html,application/xhtml+xml'
+           // }
         })
-    }
-
-    async cleanDB(): Promise<APIResponse> {
-        return this.request.post('/parabank/services/bank/cleanDB');
     }
 }

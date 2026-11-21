@@ -21,8 +21,7 @@ test.describe('ParaBank - Login UI Tests', () => {
 
         await loginPage.goto();
         await loginPage.login(user['customer.username'], user['customer.password']);
-
-        await expect(page).toHaveURL('/parabank/overview.htm');
+        await expect(page).toHaveURL(/\/parabank\/overview\.htm/);
     });
 
     test('TC06: Login UI Wrong Password', async ({ page }) => {

@@ -8,9 +8,6 @@ test.describe('ParaBank - Registration UI Tests', () => {
     let registerPage: RegisterPage;
 
     test.beforeEach(async ({ page, request }) => {
-        const api = new ParaBankApi(request);
-        await api.cleanDB();
-
         await page.goto('/parabank');
         registerPage = new RegisterPage(page);
         await registerPage.clickRegisterLink();

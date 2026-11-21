@@ -1,12 +1,10 @@
 import { test, expect } from '@playwright/test';
 import { ParaBankApi } from '@api/ParaBankApi';
 import { createUniqueUser } from '@factories/userFactory';
+import { RegistrationPayload } from '@support/types/index'
 
 test.describe('ParaBank - Authentication API Tests', () => {
-    test.beforeEach(async ({ request }) => {
-        const api = new ParaBankApi(request);
-        await api.cleanDB();
-    });
+
 
     test('TC01: User Registration via API', async ({ request }) => {
         const api = new ParaBankApi(request);
@@ -47,5 +45,16 @@ test.describe('ParaBank - Authentication API Tests', () => {
 
         const duplicateBody = await duplicateResponse.text();
         expect(duplicateBody).toContain('This username already exists');
+    });
+
+    test.fixme('TC10: missing required fields', async ({ request }) => {
+        const api = new ParaBankApi(request);
+        const user = createUniqueUser();
+        const { ['customer.address.city']: _removed, ...incompleteUser } = user;
+
+        const response = await api.registerUser(incompleteUser as RegistrationPayload);
+        expect(response.status()).toBe(400);
+
+
     });
 });
