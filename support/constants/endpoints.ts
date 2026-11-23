@@ -1,3 +1,4 @@
+import { AccountOverview } from "@pages/AccountOverviewPage";
 
 export const ENDPOINTS = {
   REGISTER: '/parabank/register.htm',
