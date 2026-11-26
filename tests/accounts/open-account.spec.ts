@@ -3,18 +3,10 @@ import { ParaBankApi } from '@api/ParaBankApi';
 import { createUniqueUser } from '@factories/userFactory';
 import { LoginPage } from '@pages/LoginPage';
 import { OpenAccount } from '@pages/OpenAccountPage';
+import { createAndLoginUser } from '@support/helpers/authHelpers';
 
 test.beforeEach(async ({ page, request }) => {
-    const api = new ParaBankApi(request);
-    const payload = createUniqueUser();
-    const loginpage = new LoginPage(page);
-
-
-    const response = await api.registerUser(payload);
-    expect(response.status()).toBe(200);
-
-    await loginpage.goto();
-    await loginpage.login(payload['customer.username'], payload['customer.password']);
+    await createAndLoginUser(page, request);
 });
 
 
@@ -30,7 +22,7 @@ test.describe('Open Account', () => {
         await expect(page.getByRole('heading', { name: 'Account Opened!' })).toBeVisible();
     });
 
-     test('TC16: Open a new Checking account', async ({ page }) => {
+    test('TC16: Open a new Checking account', async ({ page }) => {
         const openaccount = new OpenAccount(page);
 
         await openaccount.openNewAccount.click();

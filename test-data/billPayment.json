@@ -1,0 +1,12 @@
+{
+  "validBill": {
+    "payeeName": "Electric Company",
+    "address": "123 Energy St",
+    "city": "Testville",
+    "state": "CA",
+    "zip": "90210",
+    "phone": "555-123-4567",
+    "account": "987654321",
+    "amount": "50.00"
+  }
+}

@@ -22,7 +22,6 @@ test.describe('ParaBank - Registration UI Tests', () => {
 
         await registerPage.fillRegistrationForm(uniqueUserData);
         await registerPage.submitRegistration();
-
         await expect(page.locator('#rightPanel')).toContainText('Your account was created');
     });
 

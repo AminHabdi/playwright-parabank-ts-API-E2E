@@ -1,6 +1,4 @@
-import rawTestDataJson from '@test-data/testData.json';
 import rawTestData from '@test-data/testData.json';
-import { randomUUID } from 'node:crypto';
 import { TestDataStructure, RegistrationPayload } from '@support/types';
 
 const testData = rawTestData as TestDataStructure;
